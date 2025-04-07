@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estádio da Luz - SL Benfica</title>
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        .stadium-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-image {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-image:hover {
+            transform: scale(1.03);
+        }
+        
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 2rem 0;
+            gap: 1.5rem;
+        }
+        
+        .stat-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex: 1 1 200px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #e30613;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: #333;
+        }
+        
+        .virtual-tour {
+            background-color: #f0f0f0;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #e30613;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #c10512;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/SL_Benfica_logo.svg/1200px-SL_Benfica_logo.svg.png" alt="SL Benfica Logo" class="logo">
+        <h1>Estádio da Luz</h1>
+        <p>A Catedral do Futebol Português</p>
+        <div class="nav-links">
+            <a href="index.html">Início</a>
+            <a href="historia.html">História</a>
+            <a href="galeria-jogadores.html">Jogadores</a>
+            <a href="estadio.html">Estádio</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>A Casa do Benfica</h2>
+            <p>O Estádio do Sport Lisboa e Benfica, popularmente conhecido como Estádio da Luz, é um estádio de futebol localizado na freguesia de Benfica, em Lisboa, Portugal. É a casa do SL Benfica desde a sua inauguração em 2003 e é considerado um dos estádios mais impressionantes da Europa.</p>
+            <p>Com uma capacidade para 65.000 espectadores, é o maior estádio de Portugal e já foi palco de importantes competições internacionais, incluindo a final do Campeonato Europeu de Futebol de 2004 e a final da Liga dos Campeões da UEFA de 2014 e 2020.</p>
+        </section>
+
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">65.000</div>
+                <div class="stat-label">Capacidade</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">2003</div>
+                <div class="stat-label">Ano de Inauguração</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Estrelas UEFA</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">75.000 m²</div>
+                <div class="stat-label">Área Total</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>História do Estádio</h2>
+            <p>O atual Estádio da Luz foi construído para substituir o antigo estádio com o mesmo nome, que tinha capacidade para 120.000 espectadores, mas não cumpria os novos requisitos de segurança e conforto exigidos pela UEFA.</p>
+            <p>A construção do novo estádio começou em 2001 e foi concluída em 2003, com um custo estimado de 120 milhões de euros. O projeto foi desenvolvido pelo arquiteto australiano Damon Lavelle, do HOK Sport (hoje Populous), que criou um design moderno inspirado na arquitetura portuguesa e nos símbolos do clube.</p>
+            <p>O novo estádio foi inaugurado em 25 de outubro de 2003 com um jogo amistoso entre o Benfica e o Uruguai Nacional, que terminou com uma vitória por 2-1 para o clube português.</p>
+        </section>
+
+        <section>
+            <h2>Características</h2>
+            <p>O Estádio da Luz é reconhecido pela sua estrutura impressionante, com dois anéis de bancadas e um teto que cobre todos os lugares sentados. O design do teto foi inspirado nas asas da águia, símbolo do Benfica, criando uma atmosfera única dentro do estádio.</p>
+            <p>O estádio também inclui:</p>
+            <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                <li>172 camarotes VIP</li>
+                <li>Mais de 150 instalações de media</li>
+                <li>Um centro comercial integrado</li>
+                <li>Museu Cosme Damião, dedicado à história do clube</li>
+                <li>Amplos espaços para restauração</li>
+                <li>Um sistema de iluminação LED de última geração</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Eventos Memoráveis</h2>
+            <div class="timeline">
+                <div class="event">
+                    <div class="event-year">2004</div>
+                    <p>Final do Campeonato Europeu de Futebol, onde Grécia venceu Portugal por 1-0.</p>
+                </div>
+                <div class="event">
+                    <div class="event-year">2014</div>
+                    <p>Final da Liga dos Campeões da UEFA entre Real Madrid e Atlético Madrid, com vitória do Real Madrid por 4-1 após prolongamento.</p>
+                </div>
+                <div class="event">
+                    <div class="event-year">2020</div>
+                    <p>Fase final da Liga dos Campeões da UEFA, incluindo quartos-de-final e semifinal, durante a pandemia de COVID-19.</p>
+                </div>
+                <div class="event">
+                    <div class="event-year">2022</div>
+                    <p>Concerto da banda Coldplay, que atraiu mais de 55.000 espectadores em cada uma das quatro noites.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Galeria</h2>
+            <div class="stadium-gallery">
+                <img src="https://i.ytimg.com/vi/wCaSaMBXKkA/maxresdefault.jpg" alt="Vista aérea do Estádio da Luz" class="gallery-image">
+                <img src="https://www.trienaldelisboa.com/ohl/wp-content/uploads/2019/05/Estadio-da-Luz-c-S-L-Benfica-1-1024x683.jpg" alt="Interior do Estádio da Luz" class="gallery-image">
+                <img src="https://media.slbenfica.pt/-/media/benficadp/images/departamento-de-comunicacao/2019/futebol/estadio-e-adeptos/adeptos/estadio-conquista-37-new.jpg?v=636965530840000000" alt="Estádio da Luz durante a final da Champions League" class="gallery-image">
+            </div>
+        </section>
+
+        
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3 class="footer-title">Clube</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="historia.html">História</a></li>
+                    <li><a href="#">Modalidades</a></li>
+                    <li><a href="#">Instalações</a></li>
+                    <li><a href="#">Contactos</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Futebol</h3>
+                <ul class="footer-links">
+                    <li><a href="galeria-jogadores.html">Plantel</a></li>
+                    <li><a href="#">Calendário</a></li>
+                    <li><a href="#">Resultados</a></li>
+                    <li><a href="#">Classificação</a></li>
+                    <li><a href="#">Bilhetes</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Estádio</h3>
+                <ul class="footer-links">
+                    <li><a href="estadio.html">Sobre o Estádio</a></li>
+                    <li><a href="#">Visitas</a></li>
+                    <li><a href="#">Como Chegar</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Hospitalidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Redes Sociais</h3>
+                <ul class="footer-links">
+                    <li><a href=
