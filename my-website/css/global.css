@@ -130,4 +130,249 @@ footer {
     h1 {
         font-size: 2rem;
     }
+    .active-link {
+        background-color: rgba(255, 255, 255, 0.3);
+        font-weight: bold;
+    }
 }
+        .timeline {
+            margin: 2rem 0;
+        }
+
+        .event {
+            background-color: #f9f9f9;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 5px solid #e30613;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .event:hover {
+            transform: translateX(10px);
+        }
+
+        .event-year {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e30613;
+            margin-bottom: 0.5rem;
+        }
+
+        .stadium-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .gallery-image {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.03);
+        }
+
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 2rem 0;
+            gap: 1.5rem;
+        }
+
+        .stat-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex: 1 1 200px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #e30613;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .virtual-tour {
+            background-color: #f0f0f0;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #e30613;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #c10512;
+        }
+    
+        /* Enhanced Hero Section */
+        .hero {
+            height: 500px;
+            background-image: url('https://www.slbenfica.pt/-/media/benficadp/images/generic_content_area/noticias/2024/02/est%C3%A1dio-da-luz-homeland.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(227, 6, 19, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            color: white;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-cta {
+            background-color: white;
+            color: #e30613;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .hero-cta:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.05);
+        }
+
+        /* Improved Main Content */
+        .main-content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+        }
+
+        /* Enhanced Stats Container */
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .stat-item {
+            background: linear-gradient(to bottom, #ffffff, #f5f5f5);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex: 1 1 200px;
+            max-width: 250px;
+            transition: transform 0.3s;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #e30613;
+            margin-bottom: 10px;
+        }
+
+        /* Improved Grid Section */
+        .grid-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .grid-section>div {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #e30613;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #c10512;
+            transform: scale(1.05);
+        }
+
+        /* Responsive Improvements */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .grid-section {
+                grid-template-columns: 1fr;
+            }
+        }
+

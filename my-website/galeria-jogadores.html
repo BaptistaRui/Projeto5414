@@ -152,29 +152,22 @@
 </head>
 <body>
     <header>
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/SL_Benfica_logo.svg/1200px-SL_Benfica_logo.svg.png" alt="SL Benfica Logo" class="logo">
-        <h1>Galeria de Jogadores</h1>
-        <div class="nav-links">
-            <a href="index.html">Início</a>
-    <a href="historia.html">História</a>
-    <a href="galeria-jogadores.html">Jogadores</a>
-    <a href="estadio.html">Estádio</a>
-        </div>
+        <!-- Navigation will be inserted by JavaScript -->
     </header>
 
     <div class="container">
         <div class="category-filter">
-            <button class="filter-btn active">Todos</button>
-            <button class="filter-btn">Guarda-Redes</button>
-            <button class="filter-btn">Defesas</button>
-            <button class="filter-btn">Médios</button>
-            <button class="filter-btn">Avançados</button>
+            <button class="filter-btn active" data-filter="todos">Todos</button>
+            <button class="filter-btn" data-filter="guarda-redes">Guarda-Redes</button>
+            <button class="filter-btn" data-filter="defesa">Defesas</button>
+            <button class="filter-btn" data-filter="médios">Médios</button>
+            <button class="filter-btn" data-filter="avançados">Avançados</button>
         </div>
 
         <h2>Plantel Atual</h2>
         <div class="gallery">
             <!-- Guarda-Redes -->
-            <div class="player-card">
+            <div class="player-card" data-position="guarda-redes">                
                 <img src="https://www.ligaportugal.pt/backoffice/assets/Corpo_Trubin_cf4d3dc0cb.png" alt="Anatoliy Trubin" class="player-image">
                 <div class="player-info">
                     <div class="player-name">Anatoliy Trubin</div>
@@ -182,7 +175,7 @@
                     <div class="player-number">1</div>
                 </div>
             </div>
-            <div class="player-card">
+            <div class="player-card" data-position="guarda-redes">                
                 <img src="https://www.slbenfica.pt/-/media/benficadp/players-media/pictures/futebol/24-25/equipa-principal/samuel-soares.jpg?v=638582908590000000" alt="Samuel Soares" class="player-image">
                 <div class="player-info">
                     <div class="player-name">Samuel Soares</div>
@@ -192,7 +185,7 @@
             </div>
 
             <!-- Defesas -->
-            <div class="player-card">
+            <div class="player-card" data-position="defesas">                
                 <img src="https://www.slbenfica.pt/-/media/benficadp/players-media/pictures/futebol/24-25/equipa-principal/bah.jpg?v=638582906240000000" alt="Alexander Bah" class="player-image">
                 <div class="player-info">
                     <div class="player-name">Alexander Bah</div>
@@ -200,7 +193,7 @@
                     <div class="player-number">6</div>
                 </div>
             </div>
-            <div class="player-card">
+            <div class="player-card" data-position="defesas">                
                 <img src="https://www.slbenfica.pt/-/media/benficadp/players-media/pictures/futebol/24-25/equipa-principal/otamendi.jpg?v=638588177680000000" alt="Nicolás Otamendi" class="player-image">
                 <div class="player-info">
                     <div class="player-name">Nicolás Otamendi</div>
@@ -208,7 +201,7 @@
                     <div class="player-number">30</div>
                 </div>
             </div>
-            <div class="player-card">
+            <div class="player-card" data-position="defesas">                
                 <img src="https://www.slbenfica.pt/-/media/benficadp/players-media/pictures/futebol/24-25/equipa-principal/antonio-silva.jpg?v=638582905990000000" alt="António Silva" class="player-image">
                 <div class="player-info">
                     <div class="player-name">António Silva</div>
@@ -216,7 +209,7 @@
                     <div class="player-number">4</div>
                 </div>
             </div>
-            <div class="player-card">
+            <div class="player-card" data-position="defesas">                
                 <img src="https://ligaportugalstorage.blob.core.windows.net/backoffice/assets/large_Corpo_Tomas_A_69a0c014b9.png" alt="Tomás Araújo" class="player-image">
                 <div class="player-info">
                     <div class="player-name">Tomás Araújo</div>
@@ -224,8 +217,8 @@
                     <div class="player-number">44</div>
                 </div>
             </div>
-                <div class="player-card">
-                    <img src="https://img.uefa.com/imgml/TP/players/1/2025/cutoff/250153945.webp" alt="Alvaro Carreras" class="player-image">
+            <div class="player-card" data-position="defesas">                  
+                  <img src="https://img.uefa.com/imgml/TP/players/1/2025/cutoff/250153945.webp" alt="Alvaro Carreras" class="player-image">
                     <div class="player-info">
                         <div class="player-name">Alvaro Carreras</div>
                         <div class="player-position">Defesa Esquerdo</div>
@@ -234,16 +227,16 @@
             </div>
 
             <!-- Médios -->
-            <div class="player-card">
-                <img src="https://www.ligaportugal.pt/backoffice/assets/large_Corpo_Kokcu_79a517e252.png" alt="Orkun Kökçü" class="player-image">
+            <div class="player-card" data-position="médios">              
+                  <img src="https://www.ligaportugal.pt/backoffice/assets/large_Corpo_Kokcu_79a517e252.png" alt="Orkun Kökçü" class="player-image">
                 <div class="player-info">
                     <div class="player-name">Orkun Kökçü</div>
                     <div class="player-position">Médio</div>
                     <div class="player-number">10</div>
                 </div>
             </div>
-            <div class="player-card">
-                <img src="https://www.slbenfica.pt/-/media/benficadp/players-media/pictures/futebol/24-25/equipa-principal/aursnes.jpg?v=638582906180000000" alt="Aursnes Fredrik" class="player-image">
+            <div class="player-card" data-position="médios">              
+                  <img src="https://www.slbenfica.pt/-/media/benficadp/players-media/pictures/futebol/24-25/equipa-principal/aursnes.jpg?v=638582906180000000" alt="Aursnes Fredrik" class="player-image">
                 <div class="player-info">
                     <div class="player-name">Aursnes Fredrik</div>
                     <div class="player-position">Médio</div>
@@ -251,36 +244,44 @@
                 </div>
             </div>
         
-        <div class="player-card">
-            <img src="https://ligaportugalstorage.blob.core.windows.net/backoffice/assets/Corpo_Florentino_ba5c682f0f.png" alt="Florentino Luís" class="player-image">
+            <div class="player-card" data-position="médios">           
+                 <img src="https://ligaportugalstorage.blob.core.windows.net/backoffice/assets/Corpo_Florentino_ba5c682f0f.png" alt="Florentino Luís" class="player-image">
             <div class="player-info">
                 <div class="player-name">Florentino Luís</div>
                 <div class="player-position">Médio</div>
                 <div class="player-number">61</div>
             </div>
         </div>
-            <div class="player-card">
-                <img src="/placeholder.svg?height=300&width=250" alt="Ángel Di María" class="player-image">
+        <div class="player-card" data-position="médios">                
+            <img src="https://img.uefa.com/imgml/TP/players/1/2025/cutoff/1905153.webp" alt="Ángel Di María" class="player-image">
                 <div class="player-info">
                     <div class="player-name">Ángel Di María</div>
                     <div class="player-position">Extremo</div>
                     <div class="player-number">11</div>
                 </div>
             </div>
+            <div class="player-card" data-position="médios">                
+                <img src="https://img.uefa.com/imgml/TP/players/1/2025/cutoff/250146674.webp" alt="Kerem Aktürkoğlu" class="player-image">
+                <div class="player-info">
+                    <div class="player-name">Kerem Aktürkoğlu</div>
+                    <div class="player-position">Extremo</div>
+                    <div class="player-number">17</div>
+                </div>
+            </div>
 
             <!-- Avançados -->
-            <div class="player-card">
-                <img src="/placeholder.svg?height=300&width=250" alt="Arthur Cabral" class="player-image">
+            <div class="player-card" data-position="avançados">                
+                <img src="https://img.uefa.com/imgml/TP/players/1/2025/cutoff/250134190.webp" alt="Arthur Cabral" class="player-image">
                 <div class="player-info">
                     <div class="player-name">Arthur Cabral</div>
                     <div class="player-position">Avançado</div>
                     <div class="player-number">9</div>
                 </div>
             </div>
-            <div class="player-card">
-                <img src="/placeholder.svg?height=300&width=250" alt="Rafa Silva" class="player-image">
+            <div class="player-card" data-position="avançados">                
+                <img src="https://ligaportugalstorage.blob.core.windows.net/backoffice/assets/large_Corpo_Pavlidis_549c4d2007.png" alt="Vangelis Pavlidis" class="player-image">
                 <div class="player-info">
-                    <div class="player-name">Rafa Silva</div>
+                    <div class="player-name">Vangelis Pavlidis</div>
                     <div class="player-position">Avançado</div>
                     <div class="player-number">27</div>
                 </div>
@@ -291,7 +292,7 @@
             <h2>Lendas do Benfica</h2>
             <div class="gallery">
                 <div class="player-card">
-                    <img src="/placeholder.svg?height=300&width=250" alt="Eusébio" class="player-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Eusebio_en_1973.jpg/250px-Eusebio_en_1973.jpg" alt="Eusébio" class="player-image">
                     <div class="player-info">
                         <div class="player-name">Eusébio</div>
                         <div class="player-position">Avançado</div>
@@ -299,7 +300,7 @@
                     </div>
                 </div>
                 <div class="player-card">
-                    <img src="/placeholder.svg?height=300&width=250" alt="Luisão" class="player-image">
+                    <img src="https://football.fmh.ulisboa.pt/wp-content/uploads/2016/02/luisao-1.png" alt="Luisão" class="player-image">
                     <div class="player-info">
                         <div class="player-name">Luisão</div>
                         <div class="player-position">Defesa Central</div>
@@ -307,7 +308,7 @@
                     </div>
                 </div>
                 <div class="player-card">
-                    <img src="/placeholder.svg?height=300&width=250" alt="Rui Costa" class="player-image">
+                    <img src="https://knoow.net/wp-content/uploads/2016/04/Rui_Costa-e1460564318471-382x300.jpg" alt="Rui Costa" class="player-image">
                     <div class="player-info">
                         <div class="player-name">Rui Costa</div>
                         <div class="player-position">Médio</div>
@@ -315,7 +316,7 @@
                     </div>
                 </div>
                 <div class="player-card">
-                    <img src="/placeholder.svg?height=300&width=250" alt="Jonas" class="player-image">
+                    <img src="https://www.zerozero.pt/img/planteis/new/96/15/3499615_jonas_20240828010037.jpg" alt="Jonas" class="player-image">
                     <div class="player-info">
                         <div class="player-name">Jonas</div>
                         <div class="player-position">Avançado</div>
@@ -327,13 +328,42 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 - Galeria de Jogadores do Sport Lisboa e Benfica</p>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3 class="footer-title">Clube</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="historia.html">História</a></li>
+                    <li><a href="estadio.html">Estádio</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Futebol</h3>
+                <ul class="footer-links">
+                    <li><a href="galeria-jogadores.html">Plantel</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Redes Sociais</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.facebook.com/SLBenfica">Facebook</a></li>
+                    <li><a href="https://www.x.com/SLBenfica">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/slbenfica/">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 - Rui Miguel Lopes Baptista. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script>
-        // Simple filter functionality
         document.addEventListener('DOMContentLoaded', function() {
             const filterButtons = document.querySelectorAll('.filter-btn');
+            const playerCards = document.querySelectorAll('.player-card');
+            const legendsSection = document.querySelector('.legends-section');
             
             filterButtons.forEach(button => {
                 button.addEventListener('click', function() {
@@ -343,12 +373,37 @@
                     // Add active class to clicked button
                     this.classList.add('active');
                     
-                    // Here you would add actual filtering logic
-                    // For demonstration purposes only
-                    alert('Filtro selecionado: ' + this.textContent);
+                    // Get the filter value
+                    const filterValue = this.textContent.trim().toLowerCase();
+                    
+                    // Show or hide player cards based on filter value
+                    playerCards.forEach(card => {
+                        // Only apply to cards in the main gallery (not legends)
+                        if (!card.closest('.legends-section')) {
+                            if (filterValue === 'todos') {
+                                card.style.display = 'block';
+                            } else {
+                                const position = card.getAttribute('data-position');
+                                if (position === filterValue) {
+                                    card.style.display = 'block';
+                                } else {
+                                    card.style.display = 'none';
+                                }
+                            }
+                        }
+                    });
+                    
+                    // Show legends section only when "Todos" filter is active
+                    if (filterValue === 'todos') {
+                        legendsSection.style.display = 'block';
+                    } else {
+                        legendsSection.style.display = 'none';
+                    }
                 });
             });
         });
     </script>
+    <!-- Add this before the closing </body> tag -->
+<script src="js/main.js"></script>
 </body>
 </html>

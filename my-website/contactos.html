@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos - Sport Lisboa e Benfica</title>
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        .contact-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        
+        .contact-form {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 16px;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .error-message {
+            color: #e30613;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .submit-btn {
+            background-color: #e30613;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #c10512;
+        }
+        
+        .contact-info {
+            margin-top: 40px;
+        }
+        
+        .contact-info h3 {
+            color: #e30613;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Navigation will be inserted by JavaScript -->
+    </header>
+    
+    
+
+    <div class="contact-container">
+        <h2>Entre em Contacto</h2>
+        <p>Tem alguma questão ou sugestão? Envie-nos uma mensagem através do formulário abaixo.</p>
+        
+        <div class="contact-form">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nome Completo*</label>
+                    <input type="text" id="name" class="form-control" required minlength="3">
+                    <div class="error-message" id="name-error">O nome deve ter pelo menos 3 caracteres.</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" class="form-control" required>
+                    <div class="error-message" id="email-error">Por favor, insira um email válido.</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Assunto*</label>
+                    <input type="text" id="subject" class="form-control" required minlength="5">
+                    <div class="error-message" id="subject-error">O assunto deve ter pelo menos 5 caracteres.</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Mensagem*</label>
+                    <textarea id="message" class="form-control" required minlength="20"></textarea>
+                    <div class="error-message" id="message-error">A mensagem deve ter pelo menos 20 caracteres.</div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Enviar Mensagem</button>
+            </form>
+        </div>
+        
+        <div class="contact-info">
+            <h3>Informações de Contacto</h3>
+            <p><strong>Morada:</strong> Av. Eusébio da Silva Ferreira, 1500-313 Lisboa</p>
+            <p><strong>Telefone:</strong> +351 21 721 95 00</p>
+            <p><strong>Email:</strong> info@slbenfica.pt</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3 class="footer-title">Clube</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="historia.html">História</a></li>
+                    <li><a href="estadio.html">Estádio</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Futebol</h3>
+                <ul class="footer-links">
+                    <li><a href="galeria-jogadores.html">Plantel</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Redes Sociais</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.facebook.com/SLBenfica">Facebook</a></li>
+                    <li><a href="https://www.x.com/SLBenfica">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/slbenfica/">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 - Rui Miguel Lopes Baptista. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            
+            // Display error message function
+            function showError(inputId, show) {
+                const errorElement = document.getElementById(inputId + '-error');
+                errorElement.style.display = show ? 'block' : 'none';
+            }
+            
+            // Input validation function
+            function validateInput(input) {
+                if (input.validity.valid) {
+                    showError(input.id, false);
+                    return true;
+                } else {
+                    showError(input.id, true);
+                    return false;
+                }
+            }
+            
+            // Add validation to each input field
+            const inputs = ['name', 'email', 'subject', 'message'];
+            inputs.forEach(inputId => {
+                const input = document.getElementById(inputId);
+                
+                // Validate on blur (when leaving the field)
+                input.addEventListener('blur', function() {
+                    validateInput(input);
+                });
+                
+                // Hide error when typing if valid
+                input.addEventListener('input', function() {
+                    if (input.validity.valid) {
+                        showError(input.id, false);
+                    }
+                });
+            });
+            
+            // Form submission handling
+            form.addEventListener('submit', function(e) {
+                let isValid = true;
+                
+                // Validate all inputs
+                inputs.forEach(inputId => {
+                    const input = document.getElementById(inputId);
+                    if (!validateInput(input)) {
+                        isValid = false;
+                    }
+                });
+                
+                if (!isValid) {
+                    e.preventDefault();
+                } else {
+                    alert('Mensagem enviada com sucesso! Obrigado pelo seu contacto.');
+                }
+            });
+        });
+    </script>
+    <!-- Add this before the closing </body> tag -->
+    <script src="js/main.js"></script>
+</body>
+</html>
