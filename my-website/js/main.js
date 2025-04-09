@@ -23,6 +23,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Newsletter form
     initNewsletterForm();
+    
+    // Check if auth.js is loaded
+    if (typeof initAuth === 'function') {
+        initAuth();
+    }
 });
 
 /**
@@ -77,6 +82,11 @@ function initNavigation() {
             document.querySelector('.nav-links').classList.toggle('mobile-active');
             this.classList.toggle('active');
         });
+    }
+    
+    // Check if we should add auth elements (if auth.js is loaded)
+    if (typeof checkLoginStatus === 'function') {
+        checkLoginStatus();
     }
 }
 
