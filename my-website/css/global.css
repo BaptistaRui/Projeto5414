@@ -14,6 +14,11 @@
 10. DARK MODE OVERRIDES
 11. RESPONSIVE STYLES
 */
+/* Bootstrap overrides */
+:root {
+    --bs-body-bg: var(--bg-color);
+    --bs-body-color: var(--text-color);
+  }
 
 /* 1. THEME VARIABLES */
 :root {

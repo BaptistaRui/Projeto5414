@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
     initGalleryFilters();
     initContactForm();
     enhanceFormFeedback();
+
+    // Newsletter form
+    initNewsletterForm();
 });
 
 /**
@@ -417,5 +420,30 @@ function debug(message, data, showAlert = false) {
         if (showAlert) {
             alert(`Debug: ${message}`);
         }
+    }
+}
+/**
+ * Newsletter form functionality
+ */
+function initNewsletterForm() {
+    const newsletterForm = document.getElementById('newsletter-form');
+    const newsletterContainer = document.getElementById('newsletter-container');
+    const newsletterSuccess = document.getElementById('newsletter-success');
+
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const emailInput = document.getElementById('newsletter-email');
+            if (emailInput && emailInput.value.trim() !== '') {
+                // Hide the form
+                newsletterContainer.classList.add('d-none');
+
+                // Show success message
+                newsletterSuccess.classList.remove('d-none');
+
+                // Optional: You could add AJAX here to actually submit the email to a server
+            }
+        });
     }
 }
